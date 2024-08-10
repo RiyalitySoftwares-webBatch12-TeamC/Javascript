@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF_ELSE</title>
+</head>
+<body>
+    <script>
+        var Age = prompt("Enter your age");
+        if (Age<0){
+            alert("Born First");
+        }
+        else if(Age==""){
+            alert("You don't enter Any thing")
+        }
+        else{
+
+            if (Age>0 && Age<=12){
+                alert("You are Child");
+            }
+            else if (Age>12 && Age<=19){
+                alert("You are Teenager");
+            }
+            else if (Age>19 && Age<=40){
+                alert("You are Adult");
+            }
+            else if (Age>40 && Age<=60){
+                alert("You are Citizen");
+            }
+            else if (Age>60 && Age<=80){
+                alert("You are Senior Citizen");
+            }
+            else if (Age>80 && Age<=100){
+                alert("You are Super Senior Citizen");
+            }
+            else{
+                alert("Time to Die");
+            }
+        }
+    </script>
+</body>
+</html>
