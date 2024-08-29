@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get element</title>
+</head>
+<body>
+    <b>Hello</b>
+    <h1 id="head">Hi</h1>
+    <h2 class="head1">Hiii</h2>
+    <script>
+        var a = document.getElementsByTagName("b").innerHTML;
+        console.log(a);
+        var b = document.getElementById("head").innerHTML;
+        console.log(b);
+        var c = document.getElementsByClassName("head1").innerHTML;
+        console.log(c);
+    </script>
+</body>
+</html>

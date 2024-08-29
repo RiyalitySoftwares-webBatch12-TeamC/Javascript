@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prametrized Function</title>
+</head>
+<body>
+    <script>
+        function GroceryItem(Rate ,Quantity){
+           var Amount =  Rate * Quantity;
+           return Amount;
+        }
+        function Discount(Amount){
+            if(Amount>2000){
+               var OfferDiscount = Amount - (95/100*Amount) ;
+            }
+            else{
+                var OfferDiscount = Amount - (99/100*Amount);
+            }
+            return OfferDiscount;
+        }
+
+        var TotalGroceryBill = GroceryItem(42,200);
+        var TotalDiscount = Discount(TotalGroceryBill);
+
+        console.log("Your Total Bill " +TotalGroceryBill);
+        console.log("Amount To Be Discounted " +TotalDiscount);
+
+        var FinalBill =  TotalGroceryBill - TotalDiscount;
+        console.log("Your Total Bill After Giving Discount "+ FinalBill);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setting Radius</title>
+    <style>
+        #box{
+            background-size: cover;
+        }
+        #b1{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="text" placeholder="Enter height" id="Height">
+        <input type="text" placeholder="Enter width" id="Width">
+        <input type="text" placeholder="Enter Border" id="Border">
+        <input type="text" id="leftTop" placeholder="Radius of leftTop">
+        <input type="text" id="topRight" placeholder="Radius of topRight">
+        <input type="text" id="rightBottom" placeholder="Radius of rightBottom">
+        <input type="text" id="bottomLeft" placeholder="Radius of bottomLeft">
+        <input type="text" id="img" placeholder="Enter background color">
+        <input type="submit" value="Apply" onmouseover="show()">
+    </form>
+
+    <div id="b1">
+        <div id="box"></div>
+    </div>
+
+    <script>
+        function show(){
+            var Height = document.getElementById("Height").value;
+            var Width = document.getElementById("Width").value;
+            var Border = document.getElementById("Border").value;
+            var leftTop = document.getElementById("leftTop").value;
+            var topRight = document.getElementById("topRight").value;
+            var rightBottom = document.getElementById("rightBottom").value;
+            var bottomLeft = document.getElementById("bottomLeft").value;
+            var img = document.getElementById("img").value;
+
+            var box = document.getElementById("box").style;
+            
+            box.height = Height+"px";
+            box.width = Width+"px";
+            box.border = Border;
+            box.borderTopLeftRadius = leftTop+"px";
+            box.borderTopRightRadius = topRight+"px";
+            box.borderBottomRightRadius = rightBottom+"px";
+            box.borderBottomLeftRadius = bottomLeft+"px";
+            box.backgroundColor = img;
+        }
+    </script>
+</body>
+</html>

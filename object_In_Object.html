@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        var obj = {
+            Id : 1003,
+            Name : {
+                FirstName : "Shubham",
+                Surname : "Bankar"
+            },
+            TeamC : ["Aniket","Shubham","Rahul"],
+            Hello : function(){
+                console.log("Hello");
+            }
+        }
+        console.log(obj.Id);
+        console.log(obj.Name);
+        console.log(obj.Name.Surname);
+        console.log(obj.TeamC);
+        console.log(obj.TeamC[0]);
+        obj.Hello();
+    </script>
+</body>
+</html>

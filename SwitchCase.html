@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case</title>
+</head>
+<body>
+    <script>
+        var num1=parseInt(prompt("Enter A Number"));
+        var num2=parseInt(prompt("Enter A Second Number"));
+        var Choise=parseInt(prompt("Enter Your Choise...Your Choise must in between 1 to 5"));
+
+        switch(Choise){
+            case 1:
+                var Add=num1+num2;
+                console.log("Addition is ="+Add);
+                break;
+            case 2:
+                var Sub=num1-num2;
+                console.log("Subtraction is ="+Sub);
+                break;
+            case 3:
+                var Multi=num1*num2;
+                console.log("ivision is ="+Multi);
+                break;
+            case 4:
+                var Div=num1/num2;
+                console.log("Division is ="+Div);
+                break;
+            case 5:
+                var Module=num1%num2;
+                console.log("Module is ="+Module);
+                break;
+            default :
+                console.log("Hello ! ...Please Enter Value in between 1 to 5");
+                break;
+        }
+    </script>
+</body>
+</html>
