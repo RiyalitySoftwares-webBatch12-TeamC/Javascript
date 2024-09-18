@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    
+    <button onclick="Display()">Click</button>
+    <button id="btn">2nd btn</button>
+
+    <script>
+        var Display = () => console.log("hello ...!");
+
+        document.getElementById("btn").addEventListener("click",() => console.log("Welcome"));
+
+        let add = (a,b) => a+b;
+        var a = add(10,20);
+        console.log(a);
+
+        let sub = (a,b) => {
+            var c = a-b;
+            return c;
+        }
+        console.log(sub(20,10));
+    </script>
+</body>
+</html>

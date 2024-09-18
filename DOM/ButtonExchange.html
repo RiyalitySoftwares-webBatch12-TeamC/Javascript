@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Exchange</title>
+    <style>
+        h1{
+            text-shadow: 0 0 10px red;
+        }
+        #btn1,#btn2{
+            background-color: antiquewhite;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0px 0px 5px 0px red;
+            font-size: 20px;
+            font-weight: 900;
+            height: 50px;
+        }
+        #btn1{
+            color: Green;
+        }
+        #btn2{
+            color: red;
+            padding: 5px 16px;
+        }
+        .box{
+            box-shadow: 0 0 10px 5px lightblue;
+            padding: 10px;
+            border-radius: 20px;
+            width: 250px;
+            height: 170px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .main{
+            display: flex;
+            width: 100%;
+            height: 95vh;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <div class="box">
+            <h1>Do You Love Me</h1>
+            <button id="btn1" onclick="show()"></button>
+            <button id="btn2" onmouseover="change()" onmouseleave="orignal()" onclick="show()"></button>
+        </div>
+    </div>
+
+    <script>
+        var btn1 = document.getElementById("btn1");
+        btn1.innerHTML="YES";
+        var btn2 = document.getElementById("btn2");
+        btn2.innerHTML="NO";
+        function change(){
+            btn2.innerHTML="YES";
+            btn2.setAttribute("id","btn1");
+            btn1.style.visibility="hidden";
+        }
+        function orignal(){
+            btn2.innerHTML="NO"
+            btn2.setAttribute("id","btn2");
+            btn1.style.visibility="visible";
+        }
+        function show(){
+            alert("THANKS FOR ACCEPTING");
+        }
+    </script>
+</body>
+</html>

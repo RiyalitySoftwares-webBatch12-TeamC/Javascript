@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table in Js</title>
+</head>
+<style>
+    .main{
+        display: flex;
+        justify-content: center;
+    }
+    table,th,td{
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+    th,td{
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div id="box"></div>
+    </div>
+    <script>
+        var box = document.getElementById("box");
+
+        var table = document.createElement("table");
+            table.setAttribute("border","1");
+            box.appendChild(table);
+
+        var tblCaption = document.createElement("caption");
+            tblCaption.innerHTML="My Table In JS";
+            table.appendChild(tblCaption);
+        
+        // first tr
+
+        var tr1 = document.createElement("tr");
+            table.appendChild(tr1);
+        
+        var th1 = document.createElement("th");
+            th1.innerHTML="ID";
+            tr1.appendChild(th1);
+        
+        var th2 = document.createElement("th");
+            th2.innerHTML="Name";
+            tr1.appendChild(th2);
+        
+        var th3 = document.createElement("th");
+            th3.innerHTML="Salery";
+            tr1.appendChild(th3);
+        
+        var th4 = document.createElement("th");
+            th4.innerHTML="Adderss";
+            tr1.appendChild(th4);
+        
+        // second tr
+        
+        var tr2 = document.createElement("tr");
+            table.appendChild(tr2);
+        
+        var td11 = document.createElement("td");
+            td11.innerHTML="101";
+            tr2.appendChild(td11);
+        
+        var td12 = document.createElement("td");
+            td12.innerHTML="Shubham";
+            tr2.appendChild(td12);
+        
+        var td13 = document.createElement("td");
+            td13.innerHTML="10,000";
+            tr2.appendChild(td13);
+        
+        var td14 = document.createElement("td");
+            td14.innerHTML="Sangola";
+            td14.setAttribute("rowspan","2")
+            tr2.appendChild(td14);
+        
+        // third tr
+        
+        var tr2 = document.createElement("tr");
+            table.appendChild(tr2);
+        
+        var td11 = document.createElement("td");
+            td11.innerHTML="102";
+            tr2.appendChild(td11);
+        
+        var td12 = document.createElement("td");
+            td12.innerHTML="Aniket";
+            tr2.appendChild(td12);
+        
+        var td13 = document.createElement("td");
+            td13.innerHTML="10,00,000";
+            tr2.appendChild(td13);
+        
+        // var td14 = document.createElement("td");
+        //     td14.innerHTML="Sangola";
+        //     tr2.appendChild(td14);
+
+        
+        // forth tr
+        
+        var tr2 = document.createElement("tr");
+            table.appendChild(tr2);
+        
+        var td11 = document.createElement("td");
+            td11.innerHTML="103";
+            tr2.appendChild(td11);
+        
+        var td12 = document.createElement("td");
+            td12.innerHTML="Rahul";
+            tr2.appendChild(td12);
+        
+        var td13 = document.createElement("td");
+            td13.innerHTML="1,00,000";
+            tr2.appendChild(td13);
+        
+        var td14 = document.createElement("td");
+            td14.innerHTML="Shirbhavi";
+            tr2.appendChild(td14);
+
+    </script>
+</body>
+</html>

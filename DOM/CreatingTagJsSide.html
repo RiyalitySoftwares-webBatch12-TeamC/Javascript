@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crating form by js side</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .main{
+        display: flex;
+        justify-content: center;
+    }
+    #box{
+        border: 2px solid red;
+        border-radius: 30px;
+        padding: 40px;
+    }
+    h1{
+        text-align: center;
+        text-decoration: dotted underline;
+    }
+    input{
+        margin: 10px 10px 10px 0;
+    }
+    label{
+        display: block;
+    }
+    input[type='submit']{
+        display: block;
+        background-color: green;
+        padding: 3px 20px;
+        border-radius: 5px;
+    }
+    .BigInpt{
+        padding-right: 365px;
+    }
+    .fa{
+        position: relative;
+        right: 40px;
+    }
+</style>
+<body>
+    <h1>Information Form</h1>
+
+    <div class="main">
+        <div id="box"></div>
+    </div>
+
+    <script>
+        var box = document.getElementById("box");
+
+        var form = document.createElement("form");
+            box.appendChild(form);
+        
+
+        var label1 = document.createElement("label");
+            label1.innerHTML="NAME :";
+            form.appendChild(label1);
+
+        var input11 = document.createElement("input");
+            input11.setAttribute("type","text");
+            input11.setAttribute("placeholder","First Name");
+            form.appendChild(input11);
+
+        var input12 = document.createElement("input");
+            input12.setAttribute("type","text");
+            input12.setAttribute("placeholder","Middle Name");
+            form.appendChild(input12);
+            
+        var input13 = document.createElement("input");
+            input13.setAttribute("type","text");
+            input13.setAttribute("placeholder","Last Name");
+            form.appendChild(input13);
+
+        var label2 = document.createElement("label");
+            label2.innerHTML="Mobile :";
+            form.appendChild(label2);
+
+        var input2 = document.createElement("input");
+            input2.setAttribute("type","text");
+            input2.setAttribute("placeholder","Enter Mobile Number");
+            input2.setAttribute("class","BigInpt")
+            form.appendChild(input2);
+
+        var label3 = document.createElement("label");
+            label3.innerHTML="Email";
+            form.appendChild(label3);
+        
+        var input3 = document.createElement("input");
+            input3.setAttribute("type","email");
+            input3.setAttribute("placeholder","Enter your email");
+            input3.setAttribute("class","BigInpt")
+            form.appendChild(input3);
+
+
+        var label4 = document.createElement("label");
+            label4.innerHTML="Password";
+            form.appendChild(label4);
+        
+        var input4 = document.createElement("input");
+            input4.setAttribute("type","password");
+            input4.setAttribute("placeholder","Enter your password");
+            input4.setAttribute("class","BigInpt")
+            form.appendChild(input4);
+
+        var icon = document.createElement("i");
+            icon.setAttribute("class","fa fa-eye");
+            form.appendChild(icon);
+
+        var inputBtn = document.createElement("input");
+            inputBtn.setAttribute("type","submit");
+            form.appendChild(inputBtn);
+    </script>
+</body>
+</html>

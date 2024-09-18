@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        button{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <button id="btn1">Create th</button>
+    <button id="btn2">Create 1st td</button>
+    <button id="btn3">Create 2nd td</button>
+    <button id="btn4">Create 3rd td</button>
+
+    <script>
+        $(document).ready(function(){
+            var data = {
+                id:101,
+                name:"shubham",
+                sal:1000,
+                address:"sangola"
+            }
+            var data1 = {
+                id:102,
+                name:"aniket",
+                sal:2000,
+                address:"pune"
+            }
+            var data2 = {
+                id:103,
+                name:"rahul",
+                sal:3000,
+                address:"shirbhavi"
+            }
+
+            var box = $("#box");
+            var table = $("<table>");
+                box.append(table);
+                table.attr("border",1);
+
+            //1st tr
+
+            $("#btn1").on("click",function(){
+                var tr1 = $("<tr>");
+                table.prepend(tr1);
+
+                tr1.append("<th>Id</th>");
+                tr1.append("<th>Name</th>");
+                tr1.append("<th>Salery</th>");
+                tr1.append("<th>Address</th>");
+                
+            });
+
+            //2nd tr
+
+            $("#btn2").on("click",function(){
+                var tr2 =$("<tr>");
+                table.append(tr2);
+
+                tr2.append("<td>"+data.id+"</td>");
+                tr2.append("<td>"+data.name+"</td>");
+                tr2.append("<td>"+data.sal+"</td>");
+                tr2.append("<td>"+data.address+"</td>");
+                
+            });
+
+            //3rd tr
+
+            $("#btn3").on("click",function(){
+                var tr3 =$("<tr>");
+                table.append(tr3);
+
+                tr3.append("<td>"+data1.id+"</td>");
+                tr3.append("<td>"+data1.name+"</td>");
+                tr3.append("<td>"+data1.sal+"</td>");
+                tr3.append("<td>"+data1.address+"</td>");
+                
+            });
+
+            //4th tr
+
+            $("#btn4").on("click",function(){
+                var tr4 =$("<tr>");
+                table.append(tr4);
+
+                tr4.append("<td>"+data2.id+"</td>");
+                tr4.append("<td>"+data2.name+"</td>");
+                tr4.append("<td>"+data2.sal+"</td>");
+                tr4.append("<td>"+data2.address+"</td>");
+                
+            });
+
+
+            })
+    </script>
+</body>
+</html>

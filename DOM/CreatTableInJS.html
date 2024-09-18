@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Table in JS</title>
+</head>
+<body>
+    <div id="main">
+        <div id="box">
+        </div>
+    </div>
+    <script>
+        var main = document.getElementById("main");
+        var box = document.getElementById("box");
+        
+        main.style.display="flex";
+        main.style.justifyContent="center";
+        main.style.alignContent="center";
+
+        var table = document.createElement("table");
+            table.setAttribute("border","1");
+            table.setAttribute("id","tableBorder");
+            table.setAttribute("cellpadding","20");
+            box.appendChild(table);
+            table.style.marginTop="250px";
+
+        var tableBorder = document.getElementById("tableBorder");
+            // tableBorder.style.borderCollapse="collapse";
+        
+        var caption =document.createElement("caption");
+            caption.innerHTML="Employee Data";
+            table.appendChild(caption);
+        
+        //first tr
+
+        var tr1 = document.createElement("tr");
+        var th1 = document.createElement("th");
+            th1.innerHTML="Id";
+            tr1.appendChild(th1);
+        var th2 = document.createElement("th");
+            th2.innerHTML="Name";
+            tr1.appendChild(th2);
+        var th3 = document.createElement("th");
+            th3.innerHTML="Address";
+            tr1.appendChild(th3);
+        var th4 = document.createElement("th");
+            th4.innerHTML="Salery";
+            tr1.appendChild(th4);
+        var th5 = document.createElement("th");
+            th5.innerHTML="Mobile";
+            tr1.appendChild(th5);
+        var th6 = document.createElement("th");
+            th6.innerHTML="Email";
+            tr1.appendChild(th6);
+        var th7 = document.createElement("th");
+            th7.innerHTML="Company";
+            tr1.appendChild(th7);
+
+            table.appendChild(tr1);
+        
+        //second tr
+
+        var tr2 = document.createElement("tr");
+        var td11 = document.createElement("td");
+            td11.innerHTML="1001";
+            tr2.appendChild(td11);
+        var td12 = document.createElement("td");
+            td12.innerHTML="Shubham";
+            tr2.appendChild(td12);
+        var td13 = document.createElement("td");
+            td13.innerHTML="Sangola";
+            td13.setAttribute("rowspan","2");
+            tr2.appendChild(td13);
+        var td14 = document.createElement("td");
+            td14.innerHTML="1000000";
+            td14.setAttribute("rowspan","2");
+            tr2.appendChild(td14);
+        var td15 = document.createElement("td");
+            td15.innerHTML="9648768574";
+            tr2.appendChild(td15);
+        var td16 = document.createElement("td");
+            td16.innerHTML="shubham@gmail";
+            tr2.appendChild(td16);
+        var td17 = document.createElement("td");
+            td17.innerHTML="Riyality Soft.";
+            td17.setAttribute("rowspan","3")
+            tr2.appendChild(td17);
+            
+            table.appendChild(tr2);
+        
+        //third tr
+
+        var tr3 = document.createElement("tr");
+        var td21 = document.createElement("td");
+            td21.innerHTML="1002";
+            tr3.appendChild(td21);
+        var td22 = document.createElement("td");
+            td22.innerHTML="Aniket";
+            tr3.appendChild(td22);
+        var td25 = document.createElement("td");
+            td25.innerHTML="9855468574";
+            tr3.appendChild(td25);
+        var td26 = document.createElement("td");
+            td26.innerHTML="aniket@gmail";
+            tr3.appendChild(td26);
+            
+            table.appendChild(tr3);
+        
+        //fourth tr
+
+        var tr4 = document.createElement("tr");
+        var td31 = document.createElement("td");
+            td31.innerHTML="1003";
+            tr4.appendChild(td31);
+        var td32 = document.createElement("td");
+            td32.innerHTML="Rahul";
+            tr4.appendChild(td32);
+        var td33 = document.createElement("td");
+            td33.innerHTML="khardi";
+            tr4.appendChild(td33);
+        var td34 = document.createElement("td");
+            td34.innerHTML="1200000";
+            tr4.appendChild(td34);
+        var td35 = document.createElement("td");
+            td35.innerHTML="8554685971";
+            tr4.appendChild(td35);
+        var td36 = document.createElement("td");
+            td36.innerHTML="rahul@gmail";
+            tr4.appendChild(td36);
+            
+            table.appendChild(tr4);
+        
+        
+            tr1.style.background="red";
+            tr2.style.background="orange";
+            tr3.style.background="orange";
+            tr4.style.background="orange";
+    </script>
+</body>
+</html>

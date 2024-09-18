@@ -67,6 +67,8 @@
     </div>
 
 
+    <button onclick="back()">click to back</button>
+
 
     <script>
         function show(){
@@ -87,6 +89,12 @@
             document.getElementById("ADDRESS").innerHTML="ADDRESS:-";
             document.getElementById("address").innerHTML=Address;
         
+        }
+    </script>
+
+    <script>
+        function back(){
+            window.history.back();
         }
     </script>
 </body>

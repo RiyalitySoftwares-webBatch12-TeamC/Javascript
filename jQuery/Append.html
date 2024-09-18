@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">click</button>
+    <script>
+        $(document).ready(function(){
+            $("#btn").on("click",function(){
+                var box = $("#box");
+                box.append("<h1 style='color:red'>Hello</h1>");
+                box.prepend("<h1 style='color:green'>Hello</h1>");
+                box.before("<h1 style='color:yellow'>Hello</h1>");
+                box.after("<h1 style='color:black   '>Hello</h1>");
+                box.attr("style","border:2px solid red;")
+
+
+            })
+        })
+    </script>
+</body>
+</html>

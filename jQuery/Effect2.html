@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #box{
+            height: 100px;
+            width: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">click</button>
+    <script>
+        $(document).ready(function(){
+            $("#box").hide();
+            $("#btn").on("click",function(){
+                $("#box").slideDown(3000);
+                setInterval(function(){
+                    $("#box").slideUp(3000);
+                },5000);
+            })
+        })
+    </script>
+</body>
+</html>

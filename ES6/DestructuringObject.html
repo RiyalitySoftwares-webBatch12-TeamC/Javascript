@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring object</title>
+</head>
+<body>
+    
+    <script>
+        var employee = {id:101,name:"sam",sal:1000};
+        var {id,name,sal} = employee;       //De-Structuring object
+        console.log(id,name,sal);           //calling object by key only
+
+        var {name:eName} = employee;    //Changing key name
+        console.log(eName);             //calling name obj by eName
+
+        var {sal,...a} = employee;    //Rest operator for remainig obj key
+        console.log(a);                 //printing Rest of object
+    </script>
+</body>
+</html>

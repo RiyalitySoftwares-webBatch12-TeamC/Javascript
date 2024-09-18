@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Interval</title>
+</head>
+<style>
+    b{
+        font-size: 35px;
+        font-weight: 900;
+        margin-left: 5px;
+        color: red;
+        position: relative;
+        top: 40px;
+        right: 6px;
+    }
+    
+    .box{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96vh;
+    }
+    body{
+        height: 97vh;
+    }
+    #watch{
+        height: 200px;
+        width: 200px;
+        border: 8px solid brown;
+        border-radius: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 10px;
+        background-color: rgba(0, 195, 255, 0.333);
+        box-shadow: 0px 0px 10px 0px brown;
+    }
+    button{
+        height: 50px;
+        padding: 0px 10px;
+        border-radius: 20px;
+        position: relative;
+        top: 20px;
+    }
+    #start{
+        background-color: rgba(0, 128, 0, 0.727);
+    }
+    #stop{
+        background-color: rgba(255, 0, 0, 0.656);
+        position: relative;
+        top: 50px;
+    }
+    #reset{
+        background-color: rgba(255, 255, 0, 0.756);
+        padding: 0px 7px;
+    }
+    .nob{
+        position: absolute;
+        border: 2px solid brown;
+        top: 205px;
+        padding: 20px;
+        border-radius: 10px 10px 0 0;
+        background-color: rgba(165, 42, 42, 0.618);
+    }
+</style>
+<body>
+    <div class="box">
+        
+        <div id="watch">
+            <div class="nob"></div>
+            
+            <div><b id="hour">00</b><b>:</b><b id="min">00</b><b>:</b><b id="sec">00</b></div>
+            <div>
+                <button onclick="start()" id="start">Start</button>
+                <button onclick="stop()" id="stop">Stop</button>
+                <button onclick="reset()" id="reset">Reset</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        var s = 0;// s for sec
+        var m = 0; //m for minute
+        var h = 0; //h for hour
+        var S;
+        var M;
+        var H;
+
+        
+
+        // start function
+
+
+        function start(){
+
+                // for seconds start function
+
+            S = setInterval(function (){
+                s++;
+                var sec = document.getElementById("sec");
+                if(s>59){
+                    s=0;
+                }
+                if(s<10){
+                    sec.innerHTML="0"+s;
+                }
+                else{
+                    sec.innerHTML= s;
+                }
+
+            },1000);
+
+            // for minite start function
+
+
+            M = setInterval(function (){
+                m++;
+                var min = document.getElementById("min");
+                if(m>59){
+                    m=0;
+                }
+                if(m<10){
+                    min.innerHTML="0"+m;
+                }
+                else{
+                    min.innerHTML= m;
+                }
+
+            },60000);
+        
+            // for hour start function
+
+            H = setInterval(function (){
+                h++;
+                var hour = document.getElementById("hour");
+                if(h>24){
+                    h=0;
+                }
+                if(h<10){
+                    hour.innerHTML="0"+h;
+                }
+                else{
+                    hour.innerHTML= h;
+                }
+
+            },3600000);
+        }
+
+
+        // stop function 
+
+
+        function stop(){
+            clearInterval(S);
+            clearInterval(M);
+            clearInterval(H);
+        }
+                
+
+        //reset function
+
+
+        function reset(){
+            // stop();
+            var rst_s = document.getElementById("sec");
+            var rst_m = document.getElementById("min");
+            var rst_h = document.getElementById("hour");
+
+            rst_s.innerHTML="0"+0;
+            rst_m.innerHTML="0"+0;
+            rst_h.innerHTML="0"+0;
+            s = 0;
+            m = 0;
+            h = 0;
+        }
+    </script>
+</body>
+</html>

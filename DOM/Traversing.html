@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing</title>
+</head>
+<body>
+    <div id="main">
+        <ul id="ul">
+            <li>Red</li>
+            <li>Orange</li>
+            <li>blue</li>
+            <li>Green</li>
+            <li>White</li>
+        </ul>
+    </div>
+    <div id="box">
+        <ol id="ol">
+            <li>Tea</li>
+            <li>Green Tea</li>
+            <li>Coffee</li>
+        </ol>
+    </div>
+    <script>
+        var main = document.getElementById("main");
+        var ul = document.getElementById("ul");
+        var box = document.getElementById("box");
+        var ol = document.getElementById("ol");
+            console.log(main.parentNode);
+            console.log(main.children)
+            console.log(main.nextElementSibling);
+            console.log(box.previousElementSibling);
+            console.log(ul.firstElementChild.innerHTML);
+            console.log(ol.children[2].innerHTML)
+            console.log(ul.lastElementChild.innerHTML);
+    </script>
+</body>
+</html>

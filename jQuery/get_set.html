@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get set method</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        div{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <form action="#"> -->
+        <h1 id="head">Registration Form</h1>
+        <div>
+            <label for="">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+        </div>
+        <div>
+            <label for="">email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+        </div>
+        <div>
+            <label for="">Mobile</label>
+            <input type="text" id="mobile" placeholder="Enter your Mobile no.">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <div>
+            <label for="">Address</label>
+            <input type="text" id="address" placeholder="Enter your address">
+        </div>
+        <button id="btn">Click</button>
+    <!-- </form> -->
+    <script>
+        $(document).ready(function(){
+
+            //click event
+
+            $("#btn").on("click",function(){
+                var head = $("#head").html();
+                console.log(head);
+                
+                var name = $("#name").val();
+                console.log(name);
+                
+                var email = $("#email").val();
+                console.log(email);
+
+            })
+
+            //blur event
+            
+            $("#mobile").on("blur",function(){
+                var mobile = $("#mobile").val();
+                console.log(mobile);
+            })
+
+            //keyup event
+
+            $("#password").on("keyup",function(){
+                var password = $("#password").val();
+                console.log(password);
+            })
+
+            //focuse event
+
+            $("#address").on("focus",function(){
+                var address = $("#address").val();
+                console.log(address);
+            })
+        })
+    </script>
+</body>
+</html>
